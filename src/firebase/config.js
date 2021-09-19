@@ -1,12 +1,16 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore} from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { initializeApp } from 'firebase/app';
+// import { getFirestore} from "firebase/firestore";
+// import { getStorage } from "firebase/storage";
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+import * as firebase from 'firebase/app';
+import 'firebase/storage';
+import 'firebase/firestore';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-var admin = require('firebase-admin');
+//var admin = require('firebase-admin');
 
 /*
 admin.initializeApp({
@@ -25,14 +29,21 @@ const firebaseConfig = {
   measurementId: "G-CTLPXFLL5H"
 };
 
-
-
 // Initialize Firebase
-const app = admin.initializeApp(firebaseConfig);
+//const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
+//console.log(app);
 // Initialize Firebase Storage and Firestore Storage
-const projectStorage = getStorage(app);
-const projectFirestore = getFirestore();
-const timestamp = app.firestore.FieldValue.serverTimestamp();
+// const projectStorage = getStorage(app);
+// const projectFirestore = getFirestore();
+//console.log(projectStorage);
+//debugger;
+
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+
+//const timestamp = projectStorage?.FieldValue?.serverTimestamp;
 
 export { projectStorage, projectFirestore, timestamp };

@@ -14,14 +14,13 @@ const useStorage = (file) => {
 	
 	const collectionRef = projectFirestore.collection('images');
 
-	/// take a file and put it in the reference 
-	// (asynchronous) => so we put listeners to it so that we can run functions when certain events happens
+	/// take a file and put it in the reference (asynchronous)
+	//  => so we put listeners to it so that we can run functions when certain events happens
 	// The event we want to listen on is the 'state_changed' ( when the progress changes or it is complete ..) 
 	// We are going to run a function with snap object (snapshot in time of the upload) everytime the state changes
 	storageRef.put(file).on('state_changed', (snap) => {
 		let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;  // percentage of the upload by calculating the number of bytes transferred
 		setProgress(percentage);
-	
 	}, 
 	// This function will run if there is an error in the upload
 	(err) => {
@@ -31,6 +30,8 @@ const useStorage = (file) => {
 	async () => {
 		const url = await storageRef.getDownloadURL();
 		const createdAt = timestamp();
+		//const createdAt = projectStorage.database.ServerValue.TIMESTAMP ;
+		//const createdAt = ServerValue.TIMESTAMP;
 		collectionRef.add({ url: url, createdAt: createdAt});
 		setUrl(url);
 	});

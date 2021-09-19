@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Title from './comps/Title';
-import UplaodForm from './comps/UploadForm';
-import ImageGrid from './comps/ImageGrid';
-import Modal from './comps/Modal';
+import Title from './components/Title';
+import UplaodForm from './components/UploadForm';
+import ImageGrid from './components/ImageGrid';
+import Modal from './components/Modal';
 
 // Root component
 function App() {
