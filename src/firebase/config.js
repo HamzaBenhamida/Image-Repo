@@ -1,14 +1,20 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from "firebase/firestore";
+import { getFirestore} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-
-// Import the functions you need from the SDKs you need
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var admin = require('firebase-admin');
+
+/*
+admin.initializeApp({
+  credential: admin.credential.applicationDefault(),
+  databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
+});
+*/
+
 const firebaseConfig = {
   apiKey: "AIzaSyCXLljZnDpGQaZntOh0HRNa5Lk78pcK4Fo",
   authDomain: "image-repo-880de.firebaseapp.com",
@@ -19,12 +25,14 @@ const firebaseConfig = {
   measurementId: "G-CTLPXFLL5H"
 };
 
+
+
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = admin.initializeApp(firebaseConfig);
 
 // Initialize Firebase Storage and Firestore Storage
 const projectStorage = getStorage(app);
 const projectFirestore = getFirestore();
-const timestamp = FieldValue.serverTimestamp();
+const timestamp = app.firestore.FieldValue.serverTimestamp();
 
 export { projectStorage, projectFirestore, timestamp };

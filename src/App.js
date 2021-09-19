@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Title from './comps/Title';
 import UplaodForm from './comps/UploadForm';
-import ImageGird from './comps/ImageGrid';
+import ImageGrid from './comps/ImageGrid';
 import Modal from './comps/Modal';
 
 // Root component
