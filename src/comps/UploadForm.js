@@ -1,4 +1,6 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+import { useState } from 'react';
 
 // Returns a form tag with an input of type file which allows users to select images from their computer
 const UploadForm = () => {
@@ -22,12 +24,17 @@ const UploadForm = () => {
 		}
 	}
  
+	// variable && JSX syntax : if variable truthy then render the JSX else dont show it
 	return (
 	<form>
+		<label>
 		<input type="file" onChange={changeHandler}/>  
+		<span>+</span>
+		</label>
 		<div className="output">
 			{error && <div className="error"> {error} </div> }
 			{file && <div> {file.name } </div>}
+			{ file && <ProgressBar file={file} setFile={setFile}/>}
 		</div>
 	</form>	
 	)
