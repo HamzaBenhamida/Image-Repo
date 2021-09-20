@@ -4,8 +4,8 @@ The application uses React alongside CSS for the front-end and uses Firebase for
 In the project directory, you can run:
 
 ```bash 
- yarn install
- yarn start
+ npm install
+ npm start
 ```
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
