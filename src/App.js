@@ -13,7 +13,7 @@ function App() {
       <Title/>
       <UplaodForm />
       <ImgGallery setSelectedImg={setSelectedImg}/>
-      { selectedImg && <FullSizeImg setSelectedImg={setSelectedImg} setSelectedImg={setSelectedImg}/> }
+      { selectedImg && <FullSizeImg selectedImg={selectedImg} setSelectedImg={setSelectedImg}/> }
     </div>
   );
 }

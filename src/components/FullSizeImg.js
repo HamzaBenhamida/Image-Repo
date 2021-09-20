@@ -17,7 +17,7 @@ const FullSizeImg = ({ selectedImg, setSelectedImg }) => {
 	<img src={selectedImg} 
 	  initial={{y:"-100vh"}}
 	  animate={{y: 0}}
-	alt="enlarged image"/>
+	alt="full size image"/>
 	</motion.div>
 	)
 }

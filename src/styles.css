@@ -84,7 +84,7 @@ label:hover{
   overflow: hidden;
   height: 0;
   padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
+   /*padding controls height, will always be perfectly square regardless of width*/
   position: relative;
   opacity: 0.8;
 }
@@ -118,12 +118,12 @@ label:hover{
 }
 
 /*responsive layout*/
-.card {
+ .card {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* background: #353535;
+	 background: #353535;
 	font-size: 3rem;
 	color: #fff;
 	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
@@ -135,7 +135,7 @@ label:hover{
     
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat; 
     } 
       
     .card:hover {
@@ -175,8 +175,6 @@ label:hover{
 	  grid-row: span 2 / auto;
 	}
       
-  
-
 	.card-wide {
 	  grid-column: span 2 / auto;
 	}
