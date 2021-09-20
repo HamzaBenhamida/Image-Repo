@@ -15,8 +15,8 @@ const useFirestore = (collection) => {
 			});
 		setDocs(documents); 
 		})
-		// this is a cleanup function that react will run when
-                // a component using the hook unmounts
+		
+		//unsubscribe from the collection when we no longer use it (when image-grid dismounts)
 		return () => unsub();
 
 	}, [collection])
