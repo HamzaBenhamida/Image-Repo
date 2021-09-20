@@ -1,10 +1,10 @@
 import React from 'react';
-import useFirestore from '../hooks/useFirestore';
+import useOutputImgs from '../hooks/useOutputImgs';
 import { motion } from 'framer-motion';
 
-const ImageGrid = ({ setSelectedImg }) => {
-	// useFirestore is going to listen for the collection images inside firestore and return everything it has in the descending order
-	const { docs } = useFirestore('images');
+const ImgGallery = ({ setSelectedImg }) => {
+	// useOutputImgs is going to listen for the collection images inside firestore and return everything it has in the descending order
+	const { docs } = useOutputImgs('images');
 
 	return (
 		<section >
@@ -27,4 +27,4 @@ const ImageGrid = ({ setSelectedImg }) => {
 	)
 }
 
-export default ImageGrid;
+export default ImgGallery;

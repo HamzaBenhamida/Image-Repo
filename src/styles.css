@@ -10,7 +10,7 @@
 body{
   font-family: 'Source Serif Pro';
   color: var(--secondary);
-  background-color: #dfd8b3;
+  background-color: #ffffff;
 }
 .App{
   max-width: 960px;

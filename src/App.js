@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Title from './components/Title';
 import UplaodForm from './components/UploadForm';
-import ImageGrid from './components/ImageGrid';
-import Modal from './components/Modal';
+import ImgGallery from './components/ImgGallery';
+import FullSizeImg from './components/FullSizeImg';
 
 // Root component
 function App() {
@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Title/>
       <UplaodForm />
-      <ImageGrid setSelectedImg={setSelectedImg}/>
-      { selectedImg && <Modal setSelectedImg={setSelectedImg} setSelectedImg={setSelectedImg}/> }
+      <ImgGallery setSelectedImg={setSelectedImg}/>
+      { selectedImg && <FullSizeImg setSelectedImg={setSelectedImg} setSelectedImg={setSelectedImg}/> }
     </div>
   );
 }

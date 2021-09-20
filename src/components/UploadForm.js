@@ -9,7 +9,7 @@ const UploadForm = () => {
 
 	const types = ['image/png', 'image/jpeg' ];  //different type of files we will allow our users to upload
 
-	const changeHandler = (event) => {
+	const handleUploadClick = (event) => {
 		let selected = event.target.files[0]; // selects the first file (on some cases form allows you to select multiple files)
 		console.log(selected);
 
@@ -28,7 +28,7 @@ const UploadForm = () => {
 	return (
 	<form>
 		<label>
-		<input type="file" onChange={changeHandler}/>  
+		<input type="file" onChange={handleUploadClick}/>  
 		<span>+</span>
 		</label>
 		<div className="output">

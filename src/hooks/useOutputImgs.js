@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { projectFirestore } from "../firebase/config";
+import { firestoreDatabase } from "../firebase/config";
 
-const useFirestore = (collection) => {
+const useOutputImgs = (collection) => {
 	const [docs, setDocs] = useState([]);
 	
 	useEffect(() => {
-		const unsub = projectFirestore.collection(collection)
+		const unsub = firestoreDatabase.collection(collection)
 			.orderBy('createdAt', 'desc')
 			.onSnapshot((snap) => {
 			let documents = [];
@@ -24,4 +24,4 @@ const useFirestore = (collection) => {
 	return { docs };
 }
 
-export default useFirestore;
+export default useOutputImgs;

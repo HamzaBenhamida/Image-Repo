@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import useStorage from '../hooks/useStorage';
+import useFileUploadData from '../hooks/useFileUploadData';
 import { motion } from 'framer-motion';
 
 const ProgressBar = ({file, setFile}) => {
-	const { url, progress } = useStorage(file);
-
+	const { url, progress } = useFileUploadData(file);
 
 	useEffect(() => {
 		if (url) {
