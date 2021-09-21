@@ -1,7 +1,7 @@
 ## How the application works:
 The application uses **React** alongside **HTML**,**CSS** and **JavaScript** for the front-end and uses **Firebase** for the back-end. 
 
-The application has been deployed using **Netlify** and can be accessed by entering: https://gallery-pictures.netlify.app (in your web browser)
+The application has been deployed using **Netlify** and can be accessed by going to: https://repo-images.netlify.app/ 
 
 Or you can aslo clone the code on your computer and in the project directory run:
 
