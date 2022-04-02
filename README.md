@@ -3,7 +3,7 @@ The application uses **React** alongside **HTML**,**CSS** and **JavaScript** for
 
 The application has been deployed using **Netlify** and can be accessed by going to: https://repo-images.netlify.app/ 
 
-Or you can aslo clone the code on your computer and in the project directory run:
+Or you can aslo clone the code on your computer and run the following in the project directory:
 
 ```bash 
  npm install
